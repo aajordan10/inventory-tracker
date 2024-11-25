@@ -1,0 +1,132 @@
+body {
+    background-color: #f8f9fa;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.sidebar {
+    background-color: white;
+    height: 100vh;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+}
+
+.sidebar .nav-link {
+    color: #666;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+}
+
+.sidebar .nav-link i {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.sidebar .nav-link.active {
+    background-color: #f0f0ff;
+    color: #4040ff;
+}
+
+.search-box input {
+    border-radius: 20px;
+    padding-left: 1rem;
+    width: 300px;
+    background-color: #f8f9fa;
+    border: none;
+}
+
+.stats-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.inventory-stats .progress {
+    height: 8px;
+    border-radius: 4px;
+}
+
+.stats-legend small {
+    margin-right: 1rem;
+}
+
+.dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.table-container {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.table-header .btn-link {
+    color: #666;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.table-header .btn-link.active {
+    color: #4040ff;
+    border-bottom: 2px solid #4040ff;
+}
+
+.table th {
+    color: #666;
+    font-weight: 500;
+    border-bottom: 2px solid #eee;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.badge {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+.user-profile img {
+    width: 32px;
+    height: 32px;
+}
+
+.item-details {
+    background-color: #f8f9fa;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-item label {
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 0.25rem;
+}
+
+.detail-item span {
+    font-weight: 500;
+}
+
+.item-row {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.item-row:hover {
+    background-color: #f8f9fa;
+}

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Tracker</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-2 sidebar p-4">
+                <div class="brand mb-4">
+                    <h4><i class="fas fa-box-open me-2"></i> Zendenta</h4>
+                </div>
+                <div class="clinic-info mb-4">
+                    <h6>Avicenna Clinic</h6>
+                    <small class="text-muted">943 Budd Avenue, CA</small>
+                </div>
+                <nav>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-chart-line"></i> Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-calendar"></i> New Items</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-users"></i> Inventory Update</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"><i class="fas fa-box"></i> Personal</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-10 main-content p-4">
+                <!-- Header -->
+                <div class="header d-flex justify-content-between align-items-center mb-4">
+                    <div class="d-flex align-items-center">
+                        <h4 class="mb-0">Stocks</h4>
+                        <div class="search-box ms-4">
+                            <input type="text" class="form-control" placeholder="Search for anything here...">
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <span class="badge bg-success me-3">1/4</span>
+                        <div class="user-profile">
+                            <img src="https://via.placeholder.com/32" class="rounded-circle">
+                            <span class="ms-2">Darrell Steward</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats -->
+                <div class="stats-card mb-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <small class="text-muted">TOTAL ASSET VALUE</small>
+                            <h3>$10,200,323</h3>
+                        </div>
+                        <div class="inventory-stats">
+                            <div class="progress" style="width: 200px;">
+                                <div class="progress-bar bg-success" style="width: 60%"></div>
+                                <div class="progress-bar bg-warning" style="width: 20%"></div>
+                                <div class="progress-bar bg-danger" style="width: 20%"></div>
+                            </div>
+                            <div class="stats-legend mt-2">
+                                <small><span class="dot bg-success"></span> In stock: 20</small>
+                                <small><span class="dot bg-warning"></span> Low stock: 4</small>
+                                <small><span class="dot bg-danger"></span> Out of stock: 8</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Table -->
+                <div class="table-container">
+                    <div class="table-header d-flex justify-content-between align-items-center mb-3">
+                        <div class="d-flex">
+                            <button class="btn btn-link active">Inventory</button>
+                            <button class="btn btn-link">Order Stock</button>
+                        </div>
+                        <div>
+                            <button class="btn btn-outline-primary me-2">Filters</button>
+                            <button class="btn btn-primary">Order Stock</button>
+                        </div>
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Count</th>
+                                <th>Expiration</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="item-row" data-item-id="1">
+                                <td class="item-name">Dental Composite X-Flow</td>
+                                <td>45</td>
+                                <td>2024-06-15</td>
+                            </tr>
+                            <tr class="item-details d-none" id="details-1">
+                                <td colspan="3">
+                                    <div class="details-grid">
+                                        <div class="detail-item">
+                                            <label>Brand</label>
+                                            <span>Dentsply Sirona</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <label>Size</label>
+                                            <span>0.25g</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <label>Weight</label>
+                                            <span>0.25g</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <label>Fluid?</label>
+                                            <span>Yes</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <label>Expiration Date</label>
+                                            <span>June 15, 2024</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <label>QR</label>
+                                            <span>XF-2024-06-15-45</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <label>Category</label>
+                                            <span>Restorative Materials</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <label>Group</label>
+                                            <span>Composites</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="item-row" data-item-id="2">
+                                <td class="item-name">Surgical Gloves L</td>
+                                <td>200</td>
+                                <td>2025-12-31</td>
+                            </tr>
+                            <tr class="item-details d-none" id="details-2">
+                                <td colspan="3">
+                                    <div class="details-grid">
+                                        <div class="detail-item">
+                                            <label>Brand</label>
+                                            <span>MedLine</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <label>Size</label>
+                                            <span>Large</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <label>Weight</label>
+                                            <span>0.1g per glove</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <label>Fluid?</label>
+                                            <span>No</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <label>Expiration Date</label>
+                                            <span>December 31, 2025</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <label>QR</label>
+                                            <span>GL-2025-12-31-200</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <label>Category</label>
+                                            <span>PPE</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <label>Group</label>
+                                            <span>Gloves</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+
+
+
+
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+<!-- Jquery Time picker -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.13.18/jquery.timepicker.min.js"></script>
+<!-- Bootstrap Time picker -->
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+<script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<script src="main.js"></script>
+
+
+</body>
+</html>
